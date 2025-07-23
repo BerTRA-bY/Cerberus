@@ -801,11 +801,15 @@
       z-index: 1 !important;
     }
     
-    /* Gallery Section */
+    /* Modern Gallery Section */
     #gallery {
-      background: linear-gradient(135deg, #1a2332 0%, #2c3e50 50%, #1a2332 100%) !important;
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/image_17.jpg') !important;
+      background-size: cover !important;
+      background-position: center !important;
+      background-attachment: fixed !important;
+      background-repeat: no-repeat !important;
       position: relative !important;
-      padding: 100px 0 !important;
+      padding: 120px 0 !important;
       overflow: hidden !important;
     }
     
@@ -817,9 +821,9 @@
       right: 0 !important;
       bottom: 0 !important;
       background: 
-        radial-gradient(circle at 20% 20%, rgba(39, 174, 96, 0.08), transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(52, 152, 219, 0.08), transparent 50%),
-        radial-gradient(circle at 60% 10%, rgba(243, 156, 18, 0.05), transparent 50%) !important;
+        radial-gradient(circle at 20% 80%, rgba(39, 174, 96, 0.1), transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(52, 152, 219, 0.1), transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(243, 156, 18, 0.05), transparent 50%) !important;
       z-index: 1 !important;
     }
     
@@ -828,73 +832,48 @@
       z-index: 2 !important;
     }
     
-    .gallery-header {
+    /* Modern Gallery Header */
+    .gallery-header-modern {
       text-align: center !important;
-      margin-bottom: 70px !important;
-    }
-    
-    /* New Gallery Header Styles */
-    .gallery-header-container {
       margin-bottom: 80px !important;
-      padding: 0 20px !important;
+      position: relative !important;
     }
     
-    .gallery-header-glass {
+    .gallery-header-glow {
       background: linear-gradient(135deg, 
-        rgba(255, 255, 255, 0.1) 0%, 
-        rgba(255, 255, 255, 0.15) 50%, 
-        rgba(255, 255, 255, 0.1) 100%) !important;
-      backdrop-filter: blur(25px) saturate(180%) !important;
-      -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
-      border: 1px solid rgba(255, 255, 255, 0.25) !important;
-      border-radius: 30px !important;
+        rgba(255, 255, 255, 0.08) 0%, 
+        rgba(255, 255, 255, 0.12) 50%, 
+        rgba(255, 255, 255, 0.08) 100%) !important;
+      backdrop-filter: blur(30px) saturate(180%) !important;
+      -webkit-backdrop-filter: blur(30px) saturate(180%) !important;
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
+      border-radius: 40px !important;
       padding: 60px 40px !important;
       position: relative !important;
       overflow: hidden !important;
-      max-width: 900px !important;
+      max-width: 1000px !important;
       margin: 0 auto !important;
       box-shadow: 
-        0 25px 50px rgba(0, 0, 0, 0.2),
-        0 10px 25px rgba(0, 0, 0, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
-      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+        0 30px 60px rgba(0, 0, 0, 0.3),
+        0 15px 30px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
     }
     
-    .gallery-header-glass:hover {
-      transform: translateY(-8px) !important;
-      box-shadow: 
-        0 35px 70px rgba(0, 0, 0, 0.25),
-        0 15px 35px rgba(0, 0, 0, 0.15),
-        inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+    /* Gallery Stats */
+    .gallery-stats-container {
+      display: flex !important;
+      justify-content: center !important;
+      gap: 40px !important;
+      margin-bottom: 40px !important;
+      flex-wrap: wrap !important;
     }
     
-    .gallery-header-glass::before {
-      content: '' !important;
-      position: absolute !important;
-      top: -50% !important;
-      left: -50% !important;
-      width: 200% !important;
-      height: 200% !important;
-      background: 
-        radial-gradient(circle at 30% 30%, rgba(39, 174, 96, 0.12), transparent 30%),
-        radial-gradient(circle at 70% 70%, rgba(52, 152, 219, 0.12), transparent 30%),
-        radial-gradient(circle at 50% 20%, rgba(243, 156, 18, 0.08), transparent 25%) !important;
-      animation: floatingOrbs 8s ease-in-out infinite !important;
-      z-index: -1 !important;
+    .gallery-stat-item {
+      text-align: center !important;
     }
     
-    .gallery-header-content {
-      position: relative !important;
-      z-index: 2 !important;
-    }
-    
-    .gallery-title {
-      margin-bottom: 30px !important;
-    }
-    
-    .gallery-title-main {
-      display: block !important;
-      font-size: 3.5rem !important;
+    .stat-number {
+      font-size: 2.2rem !important;
       font-weight: 900 !important;
       background: linear-gradient(135deg, #27ae60 0%, #3498db 50%, #f39c12 100%) !important;
       background-size: 300% 300% !important;
@@ -902,101 +881,421 @@
       -webkit-text-fill-color: transparent !important;
       background-clip: text !important;
       animation: gradientFlow 4s ease-in-out infinite !important;
-      letter-spacing: -0.02em !important;
-      line-height: 1.1 !important;
-      margin-bottom: 10px !important;
+      margin-bottom: 5px !important;
     }
     
-    .gallery-title-sub {
+    .stat-label {
+      font-size: 0.9rem !important;
+      color: rgba(255, 255, 255, 0.7) !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.1em !important;
+      font-weight: 500 !important;
+    }
+    
+    /* Modern Gallery Title */
+    .gallery-title-modern {
+      margin-bottom: 30px !important;
+      position: relative !important;
+    }
+    
+    .gallery-title-crypto {
+      display: inline-block !important;
+      font-size: 4rem !important;
+      font-weight: 900 !important;
+      background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+      letter-spacing: -0.02em !important;
+      margin-right: 20px !important;
+    }
+    
+    .gallery-title-separator {
+      font-size: 3rem !important;
+      color: rgba(255, 255, 255, 0.3) !important;
+      margin: 0 15px !important;
+      font-weight: 300 !important;
+    }
+    
+    .gallery-title-minecraft {
+      display: inline-block !important;
+      font-size: 4rem !important;
+      font-weight: 900 !important;
+      background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+      letter-spacing: -0.02em !important;
+      margin-left: 20px !important;
+    }
+    
+    .gallery-title-subtitle {
       display: block !important;
-      font-size: 1.4rem !important;
+      font-size: 1.2rem !important;
       font-weight: 300 !important;
       color: rgba(255, 255, 255, 0.8) !important;
-      letter-spacing: 0.08em !important;
+      letter-spacing: 0.15em !important;
       text-transform: uppercase !important;
-      margin-bottom: 0 !important;
+      margin-top: 15px !important;
     }
     
-    .gallery-description {
+    /* Gallery Description */
+    .gallery-description-modern {
+      max-width: 800px !important;
+      margin: 0 auto 40px auto !important;
       text-align: center !important;
-      max-width: 700px !important;
-      margin: 0 auto !important;
     }
     
-    .gallery-desc-main {
-      font-size: 1.4rem !important;
-      font-weight: 500 !important;
-      color: rgba(255, 255, 255, 0.9) !important;
-      margin-bottom: 20px !important;
-      line-height: 1.6 !important;
+    .gallery-tagline {
+      font-size: 1.6rem !important;
+      font-weight: 600 !important;
+      color: rgba(255, 255, 255, 0.95) !important;
+      margin-bottom: 15px !important;
       letter-spacing: 0.02em !important;
     }
     
-    .gallery-desc-detail {
+    .gallery-subtitle {
       font-size: 1rem !important;
       font-weight: 300 !important;
       color: rgba(255, 255, 255, 0.7) !important;
-      line-height: 1.7 !important;
-      margin-bottom: 30px !important;
+      line-height: 1.6 !important;
       letter-spacing: 0.01em !important;
     }
     
-    .gallery-cta {
+    /* Gallery Filter Tabs */
+    .gallery-filter-tabs {
+      display: flex !important;
+      justify-content: center !important;
+      gap: 15px !important;
+      flex-wrap: wrap !important;
+      margin-top: 40px !important;
+    }
+    
+    .filter-tab {
+      background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.1) 0%, 
+        rgba(255, 255, 255, 0.05) 100%) !important;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+      border-radius: 25px !important;
+      padding: 12px 25px !important;
+      color: rgba(255, 255, 255, 0.8) !important;
+      font-size: 0.9rem !important;
+      font-weight: 500 !important;
+      cursor: pointer !important;
+      transition: all 0.3s ease !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 8px !important;
+      backdrop-filter: blur(10px) !important;
+    }
+    
+    .filter-tab:hover, .filter-tab.active {
+      background: linear-gradient(135deg, #27ae60 0%, #3498db 100%) !important;
+      border-color: rgba(255, 255, 255, 0.4) !important;
+      color: white !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 8px 25px rgba(39, 174, 96, 0.3) !important;
+    }
+    
+    /* Modern Gallery Grid */
+    .gallery-grid-modern {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+      gap: 30px !important;
+      margin-bottom: 60px !important;
+    }
+    
+    .gallery-item-modern.featured {
+      grid-column: span 2 !important;
+    }
+    
+    @media (max-width: 768px) {
+      .gallery-item-modern.featured {
+        grid-column: span 1 !important;
+      }
+      .gallery-grid-modern {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+      }
+    }
+    
+    /* Gallery Cards */
+    .gallery-card {
+      position: relative !important;
+      border-radius: 20px !important;
+      overflow: hidden !important;
+      background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.1) 0%, 
+        rgba(255, 255, 255, 0.05) 100%) !important;
+      backdrop-filter: blur(20px) !important;
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+      height: 100% !important;
+    }
+    
+    .gallery-card:hover {
+      transform: translateY(-8px) !important;
+      box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.3),
+        0 15px 35px rgba(39, 174, 96, 0.2) !important;
+      border-color: rgba(39, 174, 96, 0.4) !important;
+    }
+    
+    .gallery-image-container {
+      position: relative !important;
+      overflow: hidden !important;
+      height: 280px !important;
+    }
+    
+    .gallery-image {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+      transition: transform 0.4s ease !important;
+    }
+    
+    .gallery-card:hover .gallery-image {
+      transform: scale(1.1) !important;
+    }
+    
+    /* Gallery Overlay */
+    .gallery-overlay {
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      background: linear-gradient(
+        180deg, 
+        rgba(0, 0, 0, 0.2) 0%, 
+        rgba(0, 0, 0, 0.4) 50%, 
+        rgba(0, 0, 0, 0.8) 100%
+      ) !important;
+      opacity: 0 !important;
+      transition: opacity 0.3s ease !important;
+      padding: 20px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+    }
+    
+    .gallery-card:hover .gallery-overlay {
+      opacity: 1 !important;
+    }
+    
+    /* Gallery Badges */
+    .gallery-badges {
+      display: flex !important;
+      gap: 8px !important;
+      flex-wrap: wrap !important;
+    }
+    
+    .badge {
+      padding: 6px 12px !important;
+      border-radius: 20px !important;
+      font-size: 0.75rem !important;
+      font-weight: 600 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+    }
+    
+    .badge-nft {
+      background: linear-gradient(135deg, #9b59b6, #8e44ad) !important;
+      color: white !important;
+    }
+    
+    .badge-build {
+      background: linear-gradient(135deg, #27ae60, #2ecc71) !important;
+      color: white !important;
+    }
+    
+    .badge-rare {
+      background: linear-gradient(135deg, #f39c12, #e67e22) !important;
+      color: white !important;
+    }
+    
+    .badge-featured {
+      background: linear-gradient(135deg, #e74c3c, #c0392b) !important;
+      color: white !important;
+    }
+    
+    .badge-hot {
+      background: linear-gradient(135deg, #ff6b6b, #ee5a24) !important;
+      color: white !important;
+    }
+    
+    .badge-exclusive {
+      background: linear-gradient(135deg, #fd79a8, #e84393) !important;
+      color: white !important;
+    }
+    
+    .badge-ancient {
+      background: linear-gradient(135deg, #a29bfe, #6c5ce7) !important;
+      color: white !important;
+    }
+    
+    .badge-community {
+      background: linear-gradient(135deg, #00cec9, #00b894) !important;
+      color: white !important;
+    }
+    
+    /* Gallery Info */
+    .gallery-info {
+      color: white !important;
+      margin: 15px 0 !important;
+    }
+    
+    .gallery-item-title {
+      font-size: 1.4rem !important;
+      font-weight: 700 !important;
+      margin-bottom: 8px !important;
+      color: white !important;
+    }
+    
+    .gallery-item-desc {
+      font-size: 0.9rem !important;
+      color: rgba(255, 255, 255, 0.8) !important;
+      margin-bottom: 15px !important;
+      line-height: 1.4 !important;
+    }
+    
+    .gallery-stats {
+      display: flex !important;
+      gap: 20px !important;
+      flex-wrap: wrap !important;
+    }
+    
+    .stat {
+      display: flex !important;
+      align-items: center !important;
+      gap: 5px !important;
+      font-size: 0.8rem !important;
+      color: rgba(255, 255, 255, 0.9) !important;
+      font-weight: 500 !important;
+    }
+    
+    .stat i {
+      color: #27ae60 !important;
+    }
+    
+    /* Gallery Actions */
+    .gallery-actions {
+      display: flex !important;
+      gap: 10px !important;
+    }
+    
+    .gallery-actions button {
+      flex: 1 !important;
+      padding: 10px 15px !important;
+      border: none !important;
+      border-radius: 25px !important;
+      font-size: 0.8rem !important;
+      font-weight: 600 !important;
+      cursor: pointer !important;
+      transition: all 0.3s ease !important;
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
-      gap: 15px !important;
-      padding: 20px 30px !important;
-      background: linear-gradient(135deg, 
-        rgba(39, 174, 96, 0.15) 0%, 
-        rgba(52, 152, 219, 0.15) 50%, 
-        rgba(243, 156, 18, 0.15) 100%) !important;
-      border: 1px solid rgba(255, 255, 255, 0.2) !important;
-      border-radius: 50px !important;
-      backdrop-filter: blur(15px) !important;
-      -webkit-backdrop-filter: blur(15px) !important;
-      transition: all 0.3s ease !important;
-      cursor: pointer !important;
-      max-width: 450px !important;
-      margin: 0 auto !important;
+      gap: 5px !important;
     }
     
-    .gallery-cta:hover {
+    .btn-view {
+      background: linear-gradient(135deg, #3498db, #2980b9) !important;
+      color: white !important;
+    }
+    
+    .btn-trade {
+      background: linear-gradient(135deg, #f39c12, #e67e22) !important;
+      color: white !important;
+    }
+    
+    .btn-visit {
+      background: linear-gradient(135deg, #27ae60, #2ecc71) !important;
+      color: white !important;
+    }
+    
+    .btn-collect {
+      background: linear-gradient(135deg, #9b59b6, #8e44ad) !important;
+      color: white !important;
+    }
+    
+    .gallery-actions button:hover {
       transform: translateY(-2px) !important;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+    }
+    
+    /* Load More Button */
+    .gallery-load-more {
+      text-align: center !important;
+      margin-top: 60px !important;
+    }
+    
+    .btn-load-more {
       background: linear-gradient(135deg, 
-        rgba(39, 174, 96, 0.25) 0%, 
-        rgba(52, 152, 219, 0.25) 50%, 
-        rgba(243, 156, 18, 0.25) 100%) !important;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
-    }
-    
-    .gallery-cta-text {
-      font-size: 1rem !important;
-      font-weight: 500 !important;
+        rgba(255, 255, 255, 0.1) 0%, 
+        rgba(255, 255, 255, 0.05) 100%) !important;
+      border: 2px solid rgba(255, 255, 255, 0.2) !important;
+      border-radius: 50px !important;
+      padding: 18px 40px !important;
       color: rgba(255, 255, 255, 0.9) !important;
-      letter-spacing: 0.02em !important;
+      font-size: 1rem !important;
+      font-weight: 600 !important;
+      cursor: pointer !important;
+      transition: all 0.4s ease !important;
+      backdrop-filter: blur(20px) !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 15px !important;
     }
     
-    .gallery-cta-icon {
-      font-size: 1.2rem !important;
-      font-weight: bold !important;
-      color: #27ae60 !important;
+    .btn-load-more:hover {
+      background: linear-gradient(135deg, #27ae60 0%, #3498db 100%) !important;
+      border-color: rgba(255, 255, 255, 0.4) !important;
+      transform: translateY(-3px) !important;
+      box-shadow: 0 15px 35px rgba(39, 174, 96, 0.3) !important;
+    }
+    
+    .load-icon {
       transition: transform 0.3s ease !important;
     }
     
-    .gallery-cta:hover .gallery-cta-icon {
-      transform: translateX(5px) !important;
+    .btn-load-more:hover .load-icon {
+      transform: translateY(5px) !important;
     }
     
-    .gallery-header-accent {
-      position: absolute !important;
-      bottom: 0 !important;
-      left: 0 !important;
-      right: 0 !important;
-      height: 4px !important;
-      background: linear-gradient(90deg, #27ae60 0%, #3498db 50%, #f39c12 100%) !important;
-      background-size: 200% 100% !important;
-      animation: gradientShift 3s ease-in-out infinite !important;
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .gallery-title-crypto, .gallery-title-minecraft {
+        font-size: 2.5rem !important;
+        display: block !important;
+        margin: 0 !important;
+      }
+      
+      .gallery-title-separator {
+        display: none !important;
+      }
+      
+      .gallery-stats-container {
+        gap: 20px !important;
+      }
+      
+      .stat-number {
+        font-size: 1.8rem !important;
+      }
+      
+      .gallery-filter-tabs {
+        gap: 8px !important;
+      }
+      
+      .filter-tab {
+        padding: 10px 18px !important;
+        font-size: 0.8rem !important;
+      }
+      
+      .gallery-header-glow {
+        padding: 40px 25px !important;
+        border-radius: 25px !important;
+      }
     }
     
     @keyframes gradientFlow {
@@ -3828,103 +4127,379 @@
 
   <section id="gallery" class="tm-section-pad-top">
     <div class="container tm-container-gallery">
+      <!-- Enhanced Gallery Header -->
       <div class="row">
-        <div class="text-center col-12">
-          <div class="gallery-header-container">
-            <div class="gallery-header-glass">
-              <div class="gallery-header-content">
-                <h2 class="gallery-title">
-                  <span class="gallery-title-main">Digital Gallery</span>
-                  <span class="gallery-title-sub">Minecraft Universe</span>
-                </h2>
-                <div class="gallery-description">
-                  <p class="gallery-desc-main">
-                    Explore stunning visual creations from our thriving community
-                  </p>
-                  <p class="gallery-desc-detail">
-                    Featuring breathtaking screenshots, architectural marvels, and artistic captures from the Minecraft world. 
-                    Every image tells a story of creativity and innovation.
-                  </p>
-                  <div class="gallery-cta">
-                    <span class="gallery-cta-text">Join our community and share your masterpieces</span>
-                    <div class="gallery-cta-icon">→</div>
-                  </div>
+        <div class="col-12">
+          <div class="gallery-header-modern">
+            <div class="gallery-header-glow">
+              <div class="gallery-stats-container">
+                <div class="gallery-stat-item">
+                  <div class="stat-number">2.5M+</div>
+                  <div class="stat-label">Blocks Mined</div>
+                </div>
+                <div class="gallery-stat-item">
+                  <div class="stat-number">150K+</div>
+                  <div class="stat-label">NFTs Created</div>
+                </div>
+                <div class="gallery-stat-item">
+                  <div class="stat-number">50K+</div>
+                  <div class="stat-label">Active Players</div>
                 </div>
               </div>
-              <div class="gallery-header-accent"></div>
+              
+              <h2 class="gallery-title-modern">
+                <span class="gallery-title-crypto">CRYPTO</span>
+                <span class="gallery-title-separator">×</span>
+                <span class="gallery-title-minecraft">MINECRAFT</span>
+                <span class="gallery-title-subtitle">Digital Gallery Showcase</span>
+              </h2>
+              
+              <div class="gallery-description-modern">
+                <p class="gallery-tagline">Where Creativity Meets Cryptocurrency</p>
+                <p class="gallery-subtitle">Discover rare NFT creations, stunning builds, and exclusive crypto-backed masterpieces from our global community</p>
+              </div>
+              
+              <div class="gallery-filter-tabs">
+                <button class="filter-tab active" data-filter="all">
+                  <i class="fas fa-th"></i>
+                  All Gallery
+                </button>
+                <button class="filter-tab" data-filter="nft">
+                  <i class="fab fa-ethereum"></i>
+                  NFT Collection
+                </button>
+                <button class="filter-tab" data-filter="builds">
+                  <i class="fas fa-cube"></i>
+                  Epic Builds
+                </button>
+                <button class="filter-tab" data-filter="rare">
+                  <i class="fas fa-gem"></i>
+                  Rare Items
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Modern Gallery Grid -->
       <div class="row">
         <div class="col-12">
-          <div class="mx-auto tm-gallery-container">
-            <div class="grid tm-gallery">
-              <a href="img/gallery-img-01.jpg">
-                <figure class="effect-honey tm-gallery-item">
-                  <img src="img/gallery-tn-01.jpg" alt="Image 1" class="img-fluid">
-                  <figcaption>
-                    <h2><i>Physical Health <span>Exercise!</span></i></h2>
-                  </figcaption>
-                </figure>
-              </a>
-              <a href="img/gallery-img-02.jpg">
-                <figure class="effect-honey tm-gallery-item">
-                  <img src="img/gallery-tn-02.jpg" alt="Image 1" class="img-fluid">
-                  <figcaption>
-                    <h2><i>Rain on Glass<span> Second Image!</span></i></h2>
-                  </figcaption>
-                </figure>
-              </a>
-              <a href="img/gallery-img-03.jpg">
-                <figure class="effect-honey tm-gallery-item">
-                  <img src="img/gallery-tn-03.jpg" alt="Image 1" class="img-fluid">
-                  <figcaption>
-                    <h2><i>Sea View <span>Meag City!</span></i></h2>
-                  </figcaption>
-                </figure>
-              </a>
-              <a href="img/gallery-img-04.jpg">
-                <figure class="effect-honey tm-gallery-item">
-                  <img src="img/gallery-tn-04.jpg" alt="Image 1" class="img-fluid">
-                  <figcaption>
-                    <h2><i>Dream Girl <span>Thoughts!</span></i></h2>
-                  </figcaption>
-                </figure>
-              </a>
-              <a href="img/gallery-img-05.jpg">
-                <figure class="effect-honey tm-gallery-item">
-                  <img src="img/gallery-tn-05.jpg" alt="Image 1" class="img-fluid">
-                  <figcaption>
-                    <h2><i>Workstation <span>Offices!</span></i></h2>
-                  </figcaption>
-                </figure>
-              </a>
-              <a href="img/gallery-img-06.jpg">
-                <figure class="effect-honey tm-gallery-item">
-                  <img src="img/gallery-tn-06.jpg" alt="Image 1" class="img-fluid">
-                  <figcaption>
-                    <h2><i>Just above<span> The city!</span></i></h2>
-                  </figcaption>
-                </figure>
-              </a>
-              <a href="img/image_15.jpg">
-                <figure class="effect-honey tm-gallery-item">
-                  <img src="img/image_15.jpg" alt="Image 1" class="img-fluid">
-                  <figcaption>
-                    <h2><i>Another <span>Exercise Time!</span></i></h2>
-                  </figcaption>
-                </figure>
-              </a>
-              <a href="img/gallery-img-02.jpg">
-                <figure class="effect-honey tm-gallery-item">
-                  <img src="img/gallery-tn-02.jpg" alt="Image 1" class="img-fluid">
-                  <figcaption>
-                    <h2><i>Reapeated<span>Spot!</span></i></h2>
-                  </figcaption>
-                </figure>
-              </a>
+          <div class="gallery-grid-modern">
+            
+            <!-- Featured Large Item -->
+            <div class="gallery-item-modern featured" data-category="nft">
+              <div class="gallery-card">
+                <div class="gallery-image-container">
+                  <img src="img/gallery-img-01.jpg" alt="Featured NFT Build" class="gallery-image">
+                  <div class="gallery-overlay">
+                    <div class="gallery-badges">
+                      <span class="badge badge-nft">NFT</span>
+                      <span class="badge badge-featured">Featured</span>
+                    </div>
+                    <div class="gallery-info">
+                      <h3 class="gallery-item-title">Golden Fortress Prime</h3>
+                      <p class="gallery-item-desc">Legendary crypto-backed castle worth 2.5 ETH</p>
+                      <div class="gallery-stats">
+                        <span class="stat">
+                          <i class="fas fa-ethereum"></i>
+                          2.5 ETH
+                        </span>
+                        <span class="stat">
+                          <i class="fas fa-eye"></i>
+                          12.5K views
+                        </span>
+                      </div>
+                    </div>
+                    <div class="gallery-actions">
+                      <button class="btn-view">
+                        <i class="fas fa-expand-alt"></i>
+                        View
+                      </button>
+                      <button class="btn-trade">
+                        <i class="fas fa-exchange-alt"></i>
+                        Trade
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <!-- Regular Gallery Items -->
+            <div class="gallery-item-modern" data-category="builds">
+              <div class="gallery-card">
+                <div class="gallery-image-container">
+                  <img src="img/gallery-img-02.jpg" alt="Crystal Tower" class="gallery-image">
+                  <div class="gallery-overlay">
+                    <div class="gallery-badges">
+                      <span class="badge badge-build">Epic Build</span>
+                    </div>
+                    <div class="gallery-info">
+                      <h3 class="gallery-item-title">Crystal Tower</h3>
+                      <p class="gallery-item-desc">Magnificent crystal spire reaching the sky</p>
+                      <div class="gallery-stats">
+                        <span class="stat">
+                          <i class="fas fa-cube"></i>
+                          2.1M blocks
+                        </span>
+                        <span class="stat">
+                          <i class="fas fa-heart"></i>
+                          3.2K likes
+                        </span>
+                      </div>
+                    </div>
+                    <div class="gallery-actions">
+                      <button class="btn-view">
+                        <i class="fas fa-expand-alt"></i>
+                        View
+                      </button>
+                      <button class="btn-visit">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Visit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-item-modern" data-category="nft">
+              <div class="gallery-card">
+                <div class="gallery-image-container">
+                  <img src="img/gallery-img-03.jpg" alt="Ocean City NFT" class="gallery-image">
+                  <div class="gallery-overlay">
+                    <div class="gallery-badges">
+                      <span class="badge badge-nft">NFT</span>
+                      <span class="badge badge-hot">Hot</span>
+                    </div>
+                    <div class="gallery-info">
+                      <h3 class="gallery-item-title">Ocean City</h3>
+                      <p class="gallery-item-desc">Underwater metropolis NFT collection</p>
+                      <div class="gallery-stats">
+                        <span class="stat">
+                          <i class="fas fa-ethereum"></i>
+                          1.8 ETH
+                        </span>
+                        <span class="stat">
+                          <i class="fas fa-fire"></i>
+                          Trending
+                        </span>
+                      </div>
+                    </div>
+                    <div class="gallery-actions">
+                      <button class="btn-view">
+                        <i class="fas fa-expand-alt"></i>
+                        View
+                      </button>
+                      <button class="btn-trade">
+                        <i class="fas fa-exchange-alt"></i>
+                        Trade
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-item-modern" data-category="rare">
+              <div class="gallery-card">
+                <div class="gallery-image-container">
+                  <img src="img/gallery-img-04.jpg" alt="Diamond Sanctuary" class="gallery-image">
+                  <div class="gallery-overlay">
+                    <div class="gallery-badges">
+                      <span class="badge badge-rare">Rare</span>
+                    </div>
+                    <div class="gallery-info">
+                      <h3 class="gallery-item-title">Diamond Sanctuary</h3>
+                      <p class="gallery-item-desc">Sacred temple made of pure diamonds</p>
+                      <div class="gallery-stats">
+                        <span class="stat">
+                          <i class="fas fa-gem"></i>
+                          Ultra Rare
+                        </span>
+                        <span class="stat">
+                          <i class="fas fa-award"></i>
+                          Winner
+                        </span>
+                      </div>
+                    </div>
+                    <div class="gallery-actions">
+                      <button class="btn-view">
+                        <i class="fas fa-expand-alt"></i>
+                        View
+                      </button>
+                      <button class="btn-collect">
+                        <i class="fas fa-star"></i>
+                        Collect
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-item-modern" data-category="builds">
+              <div class="gallery-card">
+                <div class="gallery-image-container">
+                  <img src="img/gallery-img-05.jpg" alt="Tech Hub" class="gallery-image">
+                  <div class="gallery-overlay">
+                    <div class="gallery-badges">
+                      <span class="badge badge-build">Epic Build</span>
+                    </div>
+                    <div class="gallery-info">
+                      <h3 class="gallery-item-title">Crypto Tech Hub</h3>
+                      <p class="gallery-item-desc">Futuristic cryptocurrency trading center</p>
+                      <div class="gallery-stats">
+                        <span class="stat">
+                          <i class="fas fa-cube"></i>
+                          890K blocks
+                        </span>
+                        <span class="stat">
+                          <i class="fas fa-users"></i>
+                          450 visitors
+                        </span>
+                      </div>
+                    </div>
+                    <div class="gallery-actions">
+                      <button class="btn-view">
+                        <i class="fas fa-expand-alt"></i>
+                        View
+                      </button>
+                      <button class="btn-visit">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Visit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-item-modern" data-category="nft">
+              <div class="gallery-card">
+                <div class="gallery-image-container">
+                  <img src="img/gallery-img-06.jpg" alt="Sky Palace NFT" class="gallery-image">
+                  <div class="gallery-overlay">
+                    <div class="gallery-badges">
+                      <span class="badge badge-nft">NFT</span>
+                      <span class="badge badge-exclusive">Exclusive</span>
+                    </div>
+                    <div class="gallery-info">
+                      <h3 class="gallery-item-title">Sky Palace</h3>
+                      <p class="gallery-item-desc">Floating palace in the clouds</p>
+                      <div class="gallery-stats">
+                        <span class="stat">
+                          <i class="fas fa-ethereum"></i>
+                          3.2 ETH
+                        </span>
+                        <span class="stat">
+                          <i class="fas fa-crown"></i>
+                          Exclusive
+                        </span>
+                      </div>
+                    </div>
+                    <div class="gallery-actions">
+                      <button class="btn-view">
+                        <i class="fas fa-expand-alt"></i>
+                        View
+                      </button>
+                      <button class="btn-trade">
+                        <i class="fas fa-exchange-alt"></i>
+                        Trade
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-item-modern" data-category="rare">
+              <div class="gallery-card">
+                <div class="gallery-image-container">
+                  <img src="img/image_15.jpg" alt="Ancient Relic" class="gallery-image">
+                  <div class="gallery-overlay">
+                    <div class="gallery-badges">
+                      <span class="badge badge-rare">Rare</span>
+                      <span class="badge badge-ancient">Ancient</span>
+                    </div>
+                    <div class="gallery-info">
+                      <h3 class="gallery-item-title">Ancient Relic</h3>
+                      <p class="gallery-item-desc">Mysterious artifact from the old world</p>
+                      <div class="gallery-stats">
+                        <span class="stat">
+                          <i class="fas fa-gem"></i>
+                          Legendary
+                        </span>
+                        <span class="stat">
+                          <i class="fas fa-magic"></i>
+                          Magical
+                        </span>
+                      </div>
+                    </div>
+                    <div class="gallery-actions">
+                      <button class="btn-view">
+                        <i class="fas fa-expand-alt"></i>
+                        View
+                      </button>
+                      <button class="btn-collect">
+                        <i class="fas fa-star"></i>
+                        Collect
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery-item-modern" data-category="builds">
+              <div class="gallery-card">
+                <div class="gallery-image-container">
+                  <img src="img/gallery-tn-02.jpg" alt="Mining Complex" class="gallery-image">
+                  <div class="gallery-overlay">
+                    <div class="gallery-badges">
+                      <span class="badge badge-build">Epic Build</span>
+                      <span class="badge badge-community">Community</span>
+                    </div>
+                    <div class="gallery-info">
+                      <h3 class="gallery-item-title">Crypto Mining Complex</h3>
+                      <p class="gallery-item-desc">Massive community mining operation</p>
+                      <div class="gallery-stats">
+                        <span class="stat">
+                          <i class="fas fa-cube"></i>
+                          5.2M blocks
+                        </span>
+                        <span class="stat">
+                          <i class="fas fa-hammer"></i>
+                          Active mine
+                        </span>
+                      </div>
+                    </div>
+                    <div class="gallery-actions">
+                      <button class="btn-view">
+                        <i class="fas fa-expand-alt"></i>
+                        View
+                      </button>
+                      <button class="btn-visit">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Visit
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          
+          <!-- Load More Button -->
+          <div class="gallery-load-more">
+            <button class="btn-load-more">
+              <span class="load-text">Load More Creations</span>
+              <span class="load-icon">
+                <i class="fas fa-chevron-down"></i>
+              </span>
+            </button>
           </div>
         </div>
       </div>
@@ -4163,6 +4738,152 @@
           }
         ]
       });
+    });
+
+    // Modern Gallery Functionality
+    $(document).ready(function() {
+      // Gallery filter functionality
+      $('.filter-tab').on('click', function() {
+        // Remove active class from all tabs
+        $('.filter-tab').removeClass('active');
+        // Add active class to clicked tab
+        $(this).addClass('active');
+        
+        // Get filter value
+        const filterValue = $(this).data('filter');
+        
+        // Filter gallery items
+        if (filterValue === 'all') {
+          $('.gallery-item-modern').fadeIn(300);
+        } else {
+          $('.gallery-item-modern').each(function() {
+            const category = $(this).data('category');
+            if (category === filterValue) {
+              $(this).fadeIn(300);
+            } else {
+              $(this).fadeOut(300);
+            }
+          });
+        }
+      });
+
+      // Gallery item click handlers
+      $('.btn-view').on('click', function(e) {
+        e.preventDefault();
+        const galleryItem = $(this).closest('.gallery-item-modern');
+        const image = galleryItem.find('.gallery-image').attr('src');
+        const title = galleryItem.find('.gallery-item-title').text();
+        
+        // Open magnific popup
+        $.magnificPopup.open({
+          items: {
+            src: image
+          },
+          type: 'image',
+          image: {
+            titleSrc: function(item) {
+              return title;
+            }
+          }
+        });
+      });
+
+      $('.btn-trade, .btn-collect').on('click', function(e) {
+        e.preventDefault();
+        const title = $(this).closest('.gallery-item-modern').find('.gallery-item-title').text();
+        alert(`Trading/Collection feature coming soon for: ${title}`);
+      });
+
+      $('.btn-visit').on('click', function(e) {
+        e.preventDefault();
+        const title = $(this).closest('.gallery-item-modern').find('.gallery-item-title').text();
+        alert(`Virtual visit feature coming soon for: ${title}`);
+      });
+
+      // Load more functionality
+      $('.btn-load-more').on('click', function() {
+        const button = $(this);
+        const originalText = button.find('.load-text').text();
+        
+        // Show loading state
+        button.find('.load-text').text('Loading...');
+        button.find('.load-icon i').removeClass('fa-chevron-down').addClass('fa-spinner fa-spin');
+        
+        // Simulate loading (in real app, this would be an AJAX call)
+        setTimeout(function() {
+          // Reset button
+          button.find('.load-text').text(originalText);
+          button.find('.load-icon i').removeClass('fa-spinner fa-spin').addClass('fa-chevron-down');
+          
+          // Show message
+          alert('More gallery items loaded! (This is a demo - in a real app, new items would be fetched from the server)');
+        }, 2000);
+      });
+
+      // Gallery item hover effects with sound (optional)
+      $('.gallery-card').hover(
+        function() {
+          $(this).find('.gallery-overlay').css('opacity', '1');
+        },
+        function() {
+          $(this).find('.gallery-overlay').css('opacity', '0');
+        }
+      );
+
+      // Initialize magnific popup for new gallery
+      $('.gallery-image-container').magnificPopup({
+        delegate: 'img',
+        type: 'image',
+        gallery: { 
+          enabled: true,
+          navigateByImgClick: true,
+          preload: [0,1]
+        },
+        image: {
+          tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+          titleSrc: function(item) {
+            return item.el.closest('.gallery-item-modern').find('.gallery-item-title').text();
+          }
+        },
+        zoom: {
+          enabled: true,
+          duration: 300
+        }
+      });
+
+      // Animate gallery items on scroll
+      function animateGalleryItems() {
+        $('.gallery-item-modern').each(function() {
+          const elementTop = $(this).offset().top;
+          const elementBottom = elementTop + $(this).outerHeight();
+          const viewportTop = $(window).scrollTop();
+          const viewportBottom = viewportTop + $(window).height();
+          
+          if (elementBottom > viewportTop && elementTop < viewportBottom) {
+            $(this).addClass('animated');
+          }
+        });
+      }
+
+      // Add CSS for animation
+      $('<style>')
+        .prop('type', 'text/css')
+        .html(`
+          .gallery-item-modern {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+          }
+          .gallery-item-modern.animated {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        `)
+        .appendTo('head');
+
+      // Trigger animation on scroll and load
+      $(window).on('scroll', animateGalleryItems);
+      animateGalleryItems(); // Initial check
     });
 
     // Tooltip functionality for feature buttons
